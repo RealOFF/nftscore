@@ -1,4 +1,4 @@
-import { Button } from '@nftscore/uikit';
+import { Button, Input } from '@nftscore/uikit';
 
 export const Header = () => {
   return (
@@ -7,8 +7,8 @@ export const Header = () => {
         <span className='text-font-primary font-semibold text-lg'>
           nftscore
         </span>
-        <input
-          className='max-w-lg w-full h-10 rounded-lg p-2.5 text-font-secondary bg-black'
+        <Input
+          className='max-w-lg w-full h-10'
           placeholder='Search collections by name or address'
         />
       </div>
