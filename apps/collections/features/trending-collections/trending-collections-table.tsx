@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { classNames } from '@nftscore/uikit';
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 const TABLE_HEAD_ROWS = [
   'Collection',
@@ -35,7 +36,7 @@ const MOCK_TABLE_DATA = new Array(10)
 const Ceil = ({
   children,
   className,
-}: PropsWithChildren<{ className: string }>) => (
+}: PropsWithChildren<{ className?: string }>) => (
   <td className={classNames('text-font-primary flex items-center', className)}>
     {children}
   </td>
@@ -83,7 +84,7 @@ const CollectionCeil = ({
 
 type RowProps = {
   items: any[];
-  template: React.FC[];
+  template: React.FC<PropsWithChildren<any>>[];
 };
 
 const Row = ({ items, template }: RowProps) => (
