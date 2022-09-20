@@ -101,24 +101,28 @@ const Row = ({ items, template }: RowProps) => (
 );
 
 const Header = () => (
-  <tr className='w-full flex justify-between border-b border-font-secondary'>
-    {TABLE_HEAD_ROWS.map((item) => (
-      <th key={item} className='text-font-secondary text-sm font-normal py-4'>
-        {item}
-      </th>
-    ))}
-  </tr>
+  <thead>
+    <tr className='w-full flex justify-between border-b border-font-secondary'>
+      {TABLE_HEAD_ROWS.map((item) => (
+        <th key={item} className='text-font-secondary text-sm font-normal py-4'>
+          {item}
+        </th>
+      ))}
+    </tr>
+  </thead>
 );
 
 const template = [CollectionCeil, Ceil, ChangeCeil, Ceil, Ceil, Ceil];
 
 export const TrendingCollectionsTable = () => {
   return (
-    <div>
+    <table>
       <Header />
-      {MOCK_TABLE_DATA.map((item, index) => (
-        <Row key={index} template={template} items={item} />
-      ))}
-    </div>
+      <tbody>
+        {MOCK_TABLE_DATA.map((item, index) => (
+          <Row key={index} template={template} items={item} />
+        ))}
+      </tbody>
+    </table>
   );
 };
