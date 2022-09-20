@@ -1,18 +1,25 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
-import './styles.css';
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import { useEffect } from 'react'
+import { Layout } from '../components/layout'
+import './styles.css'
 
 function CustomApp({ Component, pageProps }: AppProps) {
+
+useEffect(() => {
+  document.documentElement.classList.add('dark')
+}, [])
+
   return (
     <>
       <Head>
         <title>Welcome to collections!</title>
       </Head>
-      <main className="app">
+      <Layout>
         <Component {...pageProps} />
-      </main>
+      </Layout>
     </>
-  );
+  )
 }
 
-export default CustomApp;
+export default CustomApp

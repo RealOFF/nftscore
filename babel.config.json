@@ -1,3 +1,11 @@
 {
-  "babelrcRoots": ["*"]
+  "presets": ["@emotion/babel-preset-css-prop"],
+  "babelrcRoots": [
+    "*"
+  ],
+  "plugins": [
+    "babel-plugin-twin",
+    "babel-plugin-macros",
+    "@emotion/babel-plugin"
+  ]
 }

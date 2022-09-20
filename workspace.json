@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "collections": "apps/collections",
-    "collections-e2e": "apps/collections-e2e"
+    "collections-e2e": "apps/collections-e2e",
+    "uikit": "libs/uikit"
   }
 }
