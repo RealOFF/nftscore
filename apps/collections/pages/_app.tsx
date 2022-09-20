@@ -1,25 +1,14 @@
-import { AppProps } from 'next/app'
-import Head from 'next/head'
-import { useEffect } from 'react'
-import { Layout } from '../components/layout'
-import './styles.css'
+import type { AppProps } from 'next/app';
+// import { GlobalStyles } from 'twin.macro'
 
-function CustomApp({ Component, pageProps }: AppProps) {
+import { Layout } from '../components/layout';
+import './styles.css';
 
-useEffect(() => {
-  document.documentElement.classList.add('dark')
-}, [])
+const App = ({ Component, pageProps }: AppProps) => (
+  <Layout>
+    {/* <GlobalStyles /> */}
+    <Component {...pageProps} />
+  </Layout>
+);
 
-  return (
-    <>
-      <Head>
-        <title>Welcome to collections!</title>
-      </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </>
-  )
-}
-
-export default CustomApp
+export default App;

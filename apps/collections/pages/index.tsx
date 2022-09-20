@@ -1,3 +1,3 @@
-import {TrendingCollections} from '../features/trending-collections'
+import { TrendingCollections } from '../features/trending-collections';
 
-export default TrendingCollections
+export default TrendingCollections;
