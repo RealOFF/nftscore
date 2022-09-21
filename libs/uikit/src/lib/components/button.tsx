@@ -2,11 +2,13 @@ import tw from 'twin.macro';
 
 import { VARIANTS } from '../constants/variants';
 
-const DefaultButton = tw.button`rounded-lg py-2 px-5 bg-secondary`;
+const DefaultButton = tw.button`rounded-lg py-2 px-5 dark:bg-lightblue-100`;
+
+const SecondaryButton = tw.button`rounded-lg dark:text-white py-2 px-5 dark:bg-black-300`;
 
 const OutlineButton = tw(
   DefaultButton
-)`text-font-primary border bg-transparent`;
+)`dark:text-white border bg-transparent dark:bg-transparent`;
 
 type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
   variant?: keyof typeof VARIANTS;
@@ -14,7 +16,7 @@ type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
 
 const Buttons = {
   [VARIANTS.primary]: DefaultButton,
-  [VARIANTS.secondary]: DefaultButton,
+  [VARIANTS.secondary]: SecondaryButton,
   [VARIANTS.outline]: OutlineButton,
 };
 

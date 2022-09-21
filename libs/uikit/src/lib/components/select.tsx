@@ -14,11 +14,11 @@ type SwitchProps = {
 export const Select = ({ items, ...props }: SwitchProps) => (
   <Listbox {...props}>
     <div className='relative mt-1'>
-      <Listbox.Button className='relative h-10 w-full border-font-secondary text-font-primary cursor-default border rounded-lg bg-primary py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
+      <Listbox.Button className='relative w-full h-10 py-2 pl-3 pr-10 text-left border border-gray-400 rounded-lg cursor-default dark:border-gray-200 dark:text-white dark:bg-black-100 focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm'>
         <span className='block truncate'>{props.value.title}</span>
-        <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
+        <span className='absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
           <ChevronUpDownIcon
-            className='h-5 w-5 text-gray-400'
+            className='w-5 h-5 dark:text-gray-500'
             aria-hidden='true'
           />
         </span>
@@ -29,7 +29,7 @@ export const Select = ({ items, ...props }: SwitchProps) => (
         leaveFrom='opacity-100'
         leaveTo='opacity-0'
       >
-        <Listbox.Options className='absolute border border-font-secondary mt-1 max-h-60 w-full overflow-auto rounded-md bg-primary py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+        <Listbox.Options className='absolute w-full py-1 mt-1 overflow-auto text-base border border-gray-200 rounded-md max-h-60 dark:bg-black-100 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
           {items.map((item, personIdx) => (
             <Listbox.Option
               key={personIdx}
@@ -43,7 +43,7 @@ export const Select = ({ items, ...props }: SwitchProps) => (
               {({ selected }) => (
                 <>
                   <span
-                    className={`block truncate text-font-primary ${
+                    className={`block truncate dark:text-white ${
                       selected ? 'font-medium' : 'font-normal'
                     }`}
                   >
@@ -51,7 +51,7 @@ export const Select = ({ items, ...props }: SwitchProps) => (
                   </span>
                   {selected ? (
                     <span className='absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600'>
-                      <CheckIcon className='h-5 w-5' aria-hidden='true' />
+                      <CheckIcon className='w-5 h-5' aria-hidden='true' />
                     </span>
                   ) : null}
                 </>

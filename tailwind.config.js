@@ -3,7 +3,7 @@ const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  // darkMode: 'class',
+  darkMode: 'class',
   content: [
     join(
       __dirname,
@@ -21,14 +21,24 @@ module.exports = {
         128: '32rem',
       },
       colors: {
-        primary: '#111219',
-        'primary-100': '#141820',
-        'primary-200': '#1C2230',
-        secondary: '#C3E1F6',
+        black: {
+          100: '#111219',
+          200: '#141820',
+          300: '#1C2230',
+          900: '#000000',
+        },
+        lightblue: {
+          100: '#C3E1F6',
+        },
         red: '#FF765E',
         green: '#8BE77D',
-        'font-primary': '#ffffff',
-        'font-secondary': 'rgba(255, 255, 255, 0.6)',
+        gray: {
+          50: '#F5F5F5',
+          100: '#F1F5F9',
+          200: 'rgba(255, 255, 255, 0.6)',
+          400: '#A0A6AE4D',
+          500: '#767676',
+        },
       },
     },
   },
