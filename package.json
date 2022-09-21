@@ -12,15 +12,12 @@
     "@headlessui/react": "^1.7.2",
     "@heroicons/react": "^2.0.11",
     "@nrwl/next": "14.7.6",
-    "babel-plugin-twin": "^1.0.2",
     "core-js": "^3.6.5",
     "next": "12.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "regenerator-runtime": "0.13.7",
-    "styled-components": "^5.3.5",
-    "tslib": "^2.3.0",
-    "twin.macro": "^2.8.2"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@nrwl/cli": "14.7.6",
